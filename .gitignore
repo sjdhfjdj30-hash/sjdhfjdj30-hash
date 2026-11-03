@@ -1,0 +1,21 @@
+# ==============================================================================
+# Security & Secret Protections (NEVER COMMIT)
+# ==============================================================================
+.env
+.env.*
+*.json
+*.cjs
+*.ps1
+*.log
+*.txt
+
+# Browser Profiles & Caches
+browser-profile/
+browser_profile/
+chrome-profile/
+.chrome_profile/
+
+# OS artifacts
+Thumbs.db
+Desktop.ini
+.DS_Store
