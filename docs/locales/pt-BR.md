@@ -1,63 +1,63 @@
 | [KR 한국어](./ko.md) | [US English](../../README.md) | [JP 日本語](./ja.md) | [CN 简体中文](./zh-CN.md) | [ES Español](./es.md) |
 | :---: | :---: | :---: | :---: | :---: |
-| [FR Français](./fr.md) | [DE Deutsch](./de.md) | [RU Русский](./ru.md) | [BR Português](./pt-BR.md) | [SA العربية](./ar.md) |
+| [FR Français](./fr.md) | [DE Deutsch](./de.md) | [RU Русский](./ru.md) | [SA العربية](./ar.md) | [IN हिन्दी](./hi.md) |
 
 ---
 
-# Olá, eu sou Marcus Vance 👋
+# Olá, sou Marcus Vance 👋
 
-Engenheiro de software de sistemas especializado em **redes de ultra-baixa latência**, **motores de armazenamento embarcados** e **algoritmos de consenso distribuído**.
+Engenheiro de Software de Sistemas Sênior especializado em **redes de ultra-baixa latência**, **motores de armazenamento embarcados** e **protocolos de consenso distribuído**.
 
-Projeto e construo infraestruturas determinísticas e com uso eficiente de memória, com foco em simpatia mecânica (Mechanical Sympathy), protocolos de rede sem alocação intermediária (zero-allocation) e resiliência garantida contra falhas repentinas. Acredito que o software deve ser naturalmente rápido, enxuto e observável por padrão.
+Desenvolvo infraestrutura determinística e com alta eficiência de memória, priorizando a empatia mecânica com o hardware (Mechanical Sympathy), protocolos de rede com alocação zero de memória e semânticas confiáveis de recuperação de falhas. Acredito que o software deve ser veloz, transparente e resiliente por primeiros princípios.
 
 ---
 
-## 🔭 Projetos em andamento e Open Source
+## 🔭 Principais Projetos de Engenharia
 
-| Projeto | Linguagem | Arquitetura e objetivo | Status |
+| Projeto | Linguagem | Arquitetura e Foco | Status |
 | :--- | :--- | :--- | :--- |
-| **vortex-db** | Rust | Motor de armazenamento LSM-tree embutido com zero-copy otimizado para escrita, contendo memtables concorrentes, compactação escalonada e WAL com Direct I/O. | Motor principal v0.8.2 |
-| **raft-ring** | Go | Implementação minimalista do consenso Raft com camadas de transporte modulares (QUIC / gRPC) e descoberta de nós via protocolo Gossip (SWIK). | Em desenvolvimento ativo |
-| **wire-bench** | C++20 | Suite de benchmarks de sockets com precisão em microssegundos para análise de latências de cauda TCP/UDP utilizando `io_uring` e tracepoints eBPF. | Versão estável v1.2.0 |
-| **kflow** | Go | Painel TUI nativo para terminal para monitoramento em tempo real do tráfego de partições Kafka, rebalanceamentos e lag de consumidores. | Código aberto |
+| **vortex-db** | Rust | Motor de armazenamento embarcado LSM-tree otimizado para escrita e sem cópias (zero-copy), com memtables concorrentes, compactação em camadas e WAL de E/S direta. | Motor Principal v0.8.2 |
+| **raft-ring** | Go | Implementação de alto desempenho do consenso Raft com camadas de transporte intercambiáveis (QUIC / gRPC) e descoberta de nós via gossip. | Desenvolvimento Ativo |
+| **wire-bench** | C++20 | Conjunto de benchmarks de sockets com precisão de microssegundos para avaliar latências extremas TCP/UDP via Linux `io_uring` e eBPF tracepoints. | Versão Estável v1.2.0 |
+| **kflow** | Go | Ferramenta TUI nativa de terminal para monitorar em tempo real o tráfego de partições do Kafka, eventos de rebalanceamento e lag de consumidores. | Código Aberto |
 
 ---
 
-## 🛠️ Stack técnica e ferramentas
+## 🛠️ Stack Técnico e Ferramentas
 
-| Categoria | Tecnologias e ferramentas principais |
+| Categoria | Tecnologias Principais |
 | :--- | :--- |
-| **Linguagens** | Rust, Go, C++20, C, Zig, Python (ferramentas auxiliares), Bash |
-| **Armazenamento & Dados** | LSM-Trees, B-Trees, arquitetura interna do RocksDB, PostgreSQL, Redis, Apache Kafka |
-| **Sistemas & Otimização de Baixo Nível** | Programação de sistemas Linux, `io_uring`, epoll, eBPF, instruções SIMD, alinhamento de cache-line |
-| **Concorrência & Consenso** | Raft, Paxos, buffers circulares sem travas (lock-free ring buffers), filas MPMC |
-| **Observabilidade & Profiling** | Linux `perf`, Flamegraphs, Valgrind, LLDB, eBPF Tracepoints, OpenTelemetry |
-| **Ambiente de Trabalho** | Neovim, Tmux, Alacritty, Docker, Git, Make/CMake, Linux Kernel 6.x |
+| **Linguagens** | Rust, Go, C++20, C, Zig, Python (Ferramentas internas), Bash |
+| **Armazenamento e Motores** | LSM-Trees, B-Trees, Estrutura interna do RocksDB, PostgreSQL, Redis, Apache Kafka |
+| **Sistemas e Baixo Nível** | Programação de Sistemas Linux, `io_uring`, epoll, eBPF, Otimizações SIMD, Alinhamento de linhas de cache |
+| **Concorrência e Consenso**| Raft, Paxos, Buffers circulares lock-free, Filas MPMC |
+| **Observabilidade e Profiling**| Linux `perf`, Flamegraphs, Valgrind, LLDB, eBPF Tracepoints |
+| **Ambiente de Desenvolvimento**| Neovim, Tmux, Alacritty, Docker, Git, Make/CMake, Linux Kernel 6.x |
 
 ---
 
-## 📐 Princípios de engenharia
+## 📐 Filosofia de Engenharia
 
-- **Simpatia mecânica em primeiro lugar**: Entenda a hierarquia de memória, os limites das linhas de cache da CPU e o funcionamento dos preditores de desvio antes de tentar otimizar qualquer código.
-- **Métricas superam suposições**: "Em Deus nós confiamos; todos os outros devem trazer microbenchmarks reproduzíveis e flamegraphs."
-- **Design preparado para falhas (Crash-Only)**: Todo motor de armazenamento deve ser capaz de se recuperar perfeitamente e sem corrupção após uma queda abrupta de energia ou um sinal SIGKILL em qualquer instrução.
-- **Mínimo de dependências**: A melhor dependência é aquela que você nunca incluiu. Mantenha a árvore de dependências compacta, auditável e resiliente.
+- **Empatia Mecânica Primeiro (Mechanical Sympathy)**: Compreender a hierarquia de memória física, limites de linha de cache e previsores de desvio antes de otimizar código.
+- **Métricas Acima de Suposições**: "Em Deus nós confiamos; todos os outros devem apresentar micro-benchmarks reprodutíveis e flamegraphs."
+- **Design Voltado a Falhas (Crash-Only Design)**: Qualquer sistema de armazenamento deve ser capaz de recuperar a integridade de dados perfeitamente após corte súbito de energia ou sinal SIGKILL em qualquer instrução.
+- **Dependências Mínimas**: A melhor dependência é aquela que você nunca adicionou. Manter a árvore de dependências enxuta, auditável e confiável.
 
 ---
 
-## 📈 Atividades recentes
+## 📈 Foco de Desenvolvimento Atual
 
 ```text
-Sprint atual:
-  [■■■■■■■■■□] 90% - Migração do caminho de escrita WAL do vortex-db para io_uring assíncrono
-  [■■■■■■□□□□] 60% - Implementação da transferência de snapshots de máquina de estados no raft-ring
-  [■■■■■■■■■■] 100% - Lançamento do executor de perfil de latência wire-bench para Linux 6.8+
+Sprint Atual:
+  [■■■■■■■■■□] 90% - Migrando o fluxo de gravação de WAL do vortex-db para io_uring assíncrono
+  [■■■■■■□□□□] 60% - Implementando transferência de máquina de estados por snapshot no raft-ring
+  [■■■■■■■■■■] 100% - Lançamento do perfilador de latência wire-bench para Linux 6.8+
 ```
 
 ---
 
-## 📬 Contato & Links
+## 📬 Contato e Links
 
 - **E-mail**: `sjdhfjdj30@gmail.com`
 - **GitHub**: [`@sjdhfjdj30-hash`](https://github.com/sjdhfjdj30-hash)
-- **Fuso horário**: UTC+9 / Disponível para colaboração remota distribuída em projetos de código aberto
+- **Fuso Horário**: UTC+9 / Disponível para colaboração remota em sistemas distribuídos de código aberto

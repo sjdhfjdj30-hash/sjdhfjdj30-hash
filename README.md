@@ -1,24 +1,24 @@
 | [KR 한국어](./docs/locales/ko.md) | [US English](./README.md) | [JP 日本語](./docs/locales/ja.md) | [CN 简体中文](./docs/locales/zh-CN.md) | [ES Español](./docs/locales/es.md) |
 | :---: | :---: | :---: | :---: | :---: |
-| [FR Français](./docs/locales/fr.md) | [DE Deutsch](./docs/locales/de.md) | [RU Русский](./docs/locales/ru.md) | [BR Português](./docs/locales/pt-BR.md) | [SA العربية](./docs/locales/ar.md) |
+| [FR Français](./docs/locales/fr.md) | [DE Deutsch](./docs/locales/de.md) | [RU Русский](./docs/locales/ru.md) | [SA العربية](./docs/locales/ar.md) | [IN हिन्दी](./docs/locales/hi.md) |
 
 ---
 
 # Hi there, I'm Marcus Vance 👋
 
-Systems Software Engineer focused on **low-latency networking**, **embedded storage engines**, and **distributed consensus algorithms**.
+Senior Systems Software Engineer specializing in **low-latency networking**, **embedded storage engines**, and **distributed consensus protocols**.
 
-I build deterministic, memory-efficient infrastructure with an emphasis on mechanical sympathy, zero-allocation network protocols, and robust crash-recovery semantics. I believe software should be fast, simple, and observable by default.
+I design deterministic, memory-efficient software with an uncompromising focus on mechanical sympathy, zero-allocation protocols, and crash-recovery semantics. I believe software should be fast, transparent, and resilient by first principles.
 
 ---
 
-## 🔭 Active Work & Projects
+## 🔭 Core Engineering Projects
 
-| Project | Language | Architecture & Purpose | Status |
+| Project | Language | Architecture & Focus | Status |
 | :--- | :--- | :--- | :--- |
 | **vortex-db** | Rust | Zero-copy, write-optimized LSM-tree embedded storage engine featuring concurrent memtables, tiered compaction, and direct I/O WAL. | Core Engine v0.8.2 |
-| **raft-ring** | Go | Minimalist Raft consensus implementation with pluggable transport layers (QUIC / gRPC) and SWIK gossip membership discovery. | Active Development |
-| **wire-bench** | C++20 | Microsecond-precision socket benchmark suite testing TCP/UDP tail latencies using Linux `io_uring` and eBPF tracepoints. | Stable v1.2.0 |
+| **raft-ring** | Go | High-performance Raft consensus implementation with pluggable transport layers (QUIC / gRPC) and SWIK gossip membership discovery. | Active Development |
+| **wire-bench** | C++20 | Microsecond-precision socket benchmark suite profiling TCP/UDP tail latencies using Linux `io_uring` and eBPF tracepoints. | Stable v1.2.0 |
 | **kflow** | Go | Terminal-native TUI monitoring tool for real-time Kafka partition traffic, rebalance events, and consumer lag tracking. | Open Source |
 
 ---
@@ -45,7 +45,7 @@ I build deterministic, memory-efficient infrastructure with an emphasis on mecha
 
 ---
 
-## 📈 Recent Activity & Workflows
+## 📈 Current Development Focus
 
 ```text
 Current Sprint:
@@ -60,4 +60,4 @@ Current Sprint:
 
 - **Email**: `sjdhfjdj30@gmail.com`
 - **GitHub**: [`@sjdhfjdj30-hash`](https://github.com/sjdhfjdj30-hash)
-- **Timezone**: UTC+9 / Available for distributed open-source collaboration worldwide
+- **Timezone**: UTC+9 / Open for distributed systems collaboration worldwide
